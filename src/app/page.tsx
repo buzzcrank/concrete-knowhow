@@ -110,6 +110,46 @@ export default function HomePage() {
           ))}
         </dl>
       </section>
+
+      <section className="mb-16 rounded-xl bg-navy-900 px-8 py-10">
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-1">
+          Mr. Knoi It All Network
+        </p>
+        <h2 className="text-2xl font-bold text-white mb-2">More from Mr. Knoi It All</h2>
+        <p className="text-gray-400 mb-6">Your hand of calculators &amp; reference info.</p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <a
+            href="https://tenant.mrknowitall.net"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-lg border border-navy-700 bg-navy-800 p-5 hover:border-brand-400 hover:bg-navy-700 transition-all"
+          >
+            <div className="text-2xl mb-2">🏠</div>
+            <div className="font-bold text-white group-hover:text-brand-400 transition-colors">
+              Tenant Knowhow
+            </div>
+            <p className="mt-1 text-sm text-gray-400">
+              Know your rights as a renter — state-by-state tenant law, plain English.
+            </p>
+            <span className="mt-3 inline-block text-xs text-brand-400">tenant.mrknowitall.net ↗</span>
+          </a>
+          <a
+            href="https://mrknowitall.net"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-lg border border-navy-700 bg-navy-800 p-5 hover:border-brand-400 hover:bg-navy-700 transition-all"
+          >
+            <div className="text-2xl mb-2">🤙</div>
+            <div className="font-bold text-white group-hover:text-brand-400 transition-colors">
+              Mr. Knoi It All
+            </div>
+            <p className="mt-1 text-sm text-gray-400">
+              The hub — all our calculators and reference tools in one place.
+            </p>
+            <span className="mt-3 inline-block text-xs text-brand-400">mrknowitall.net ↗</span>
+          </a>
+        </div>
+      </section>
     </>
   )
 }

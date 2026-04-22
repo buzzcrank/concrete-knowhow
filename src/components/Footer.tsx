@@ -70,6 +70,16 @@ export default function Footer() {
                   mrknowitall.net ↗
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://tenant.mrknowitall.net"
+                  className="text-sm text-gray-400 hover:text-brand-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tenant Knowhow ↗
+                </a>
+              </li>
             </ul>
           </div>
           <div>
