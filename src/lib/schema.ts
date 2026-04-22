@@ -7,7 +7,7 @@ export function orgSchema() {
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/Mr-Know-It-All-%20logo.jpg`,
   }
 }
 

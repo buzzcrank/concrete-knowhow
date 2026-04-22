@@ -28,12 +28,21 @@ export const metadata: Metadata = {
     type: 'website',
     url: SITE_URL,
     locale: 'en_US',
+    images: [
+      {
+        url: '/Mr-Know-It-All-%20logo.jpg',
+        width: 1400,
+        height: 735,
+        alt: 'Mr. Knoi It All — Concrete Knowhow',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Concrete Knowhow — Free Construction Calculators',
     description:
       'Free calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results.',
+    images: ['/Mr-Know-It-All-%20logo.jpg'],
   },
   alternates: {
     canonical: SITE_URL,
