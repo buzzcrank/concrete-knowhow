@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-1">
-              Mr. Knoi It All
+              Mr. Know-It-All
             </p>
             <p className="font-bold text-white mb-2">Concrete Knowhow</p>
             <p className="text-sm text-gray-400">
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
         <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col gap-1 sm:flex-row sm:justify-between">
           <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} Mr. Knoi It All. For reference only — always verify
+            &copy; {new Date().getFullYear()} Mr. Know-It-All. For reference only — always verify
             with your supplier. See our{' '}
             <Link href="/disclaimer/" className="underline hover:text-brand-400">
               disclaimer
@@ -114,7 +114,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Mr. Knoi It All
+              Mr. Know-It-All
             </a>{' '}
             network
           </p>

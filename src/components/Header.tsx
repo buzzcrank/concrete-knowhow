@@ -15,7 +15,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex flex-col leading-tight">
           <span className="text-xs font-semibold uppercase tracking-widest text-navy-700">
-            Mr. Knoi It All
+            Mr. Know-It-All
           </span>
           <span className="text-xl font-extrabold text-navy-900">
             Concrete <span className="text-brand-600">Knowhow</span>
