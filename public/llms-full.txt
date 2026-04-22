@@ -1,0 +1,50 @@
+# Concrete Knowhow — Full Reference
+
+## Concrete Slab Calculator
+
+Formulas:
+- Rectangular: vol_ft³ = length_ft × width_ft × thickness_ft
+- Round: vol_ft³ = π × (diameter_ft / 2)² × thickness_ft
+- vol_yd³ = vol_ft³ / 27
+- 60 lb bags = ceil(vol_ft³ / 0.45)
+- 80 lb bags = ceil(vol_ft³ / 0.60)
+- Waste buffer: +5% or +10% recommended
+
+Threshold: Ready-mix concrete is more economical above ~1 cubic yard (27 cubic feet).
+
+## Gravel Calculator
+
+Formulas:
+- vol_ft³ = length_ft × width_ft × depth_ft
+- vol_yd³ = vol_ft³ / 27
+- tons = vol_yd³ × bulk_density (typically 1.4 t/yd³ for pea gravel, 1.5 for crushed stone)
+
+## Mulch Calculator
+
+Formulas:
+- vol_ft³ = length_ft × width_ft × depth_ft
+- vol_yd³ = vol_ft³ / 27
+- 2 ft³ bags = ceil(vol_ft³ / 2)
+- 3 ft³ bags = ceil(vol_ft³ / 3)
+
+## Topsoil Calculator
+
+Formulas:
+- vol_ft³ = length_ft × width_ft × depth_ft
+- vol_yd³ = vol_ft³ / 27
+- Order 10–15% extra to account for settling
+
+## Sand Calculator
+
+Formulas:
+- vol_ft³ = length_ft × width_ft × depth_ft
+- vol_yd³ = vol_ft³ / 27
+- tons = vol_yd³ × 1.35 (typical bulk density for dry sand)
+
+## Sod Calculator
+
+Formulas:
+- area_ft² = length_ft × width_ft
+- rolls = ceil(area_ft² / 10) — standard roll covers ~10 ft²
+- pallets = ceil(area_ft² / 450) — standard pallet covers 450–500 ft²
+- Order 5–10% extra for cuts and waste
