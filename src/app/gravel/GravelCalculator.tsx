@@ -151,9 +151,10 @@ export default function GravelCalculator() {
         </div>
       </div>
 
-      {/* Waste buffer */}
+      {/* Overage */}
       <div className="mb-6">
-        <p className="text-sm font-medium text-gray-700 mb-2">Waste Buffer</p>
+        <p className="text-sm font-medium text-gray-700 mb-1">Overage</p>
+        <p className="text-xs text-gray-400 mb-2">Extra for compaction and uneven ground. Add 10% for driveways — gravel settles.</p>
         <div className="flex gap-2">
           {([0, 5, 10] as Waste[]).map((w) => (
             <button
@@ -165,7 +166,7 @@ export default function GravelCalculator() {
                   : 'border-gray-300 bg-white text-gray-700 hover:border-brand-400'
               }`}
             >
-              {w === 0 ? 'None' : `+${w}%`}
+              {w === 0 ? 'Exact' : `+${w}%`}
             </button>
           ))}
         </div>
@@ -174,13 +175,9 @@ export default function GravelCalculator() {
       {/* Results */}
       {hasInput ? (
         <div className="grid grid-cols-3 gap-3">
-          <ResultCard label="Cubic Feet" value={volFt3.toFixed(2)} sub="ft³" />
-          <ResultCard label="Cubic Yards" value={volYd3.toFixed(2)} sub="yd³" />
-          <ResultCard
-            label="Tons"
-            value={tons.toFixed(2)}
-            sub={`@ ${material.density} t/yd³`}
-          />
+          <ResultCard label="Cubic Yards" value={volYd3.toFixed(2)} sub="order by the yard (bulk)" />
+          <ResultCard label="Tons" value={tons.toFixed(2)} sub={`weight for delivery quotes`} />
+          <ResultCard label="Cubic Feet" value={volFt3.toFixed(2)} sub="total volume" />
         </div>
       ) : (
         <div className="rounded-lg border border-gray-200 bg-white px-4 py-8 text-center text-sm text-gray-400">

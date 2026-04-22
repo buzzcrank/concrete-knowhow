@@ -100,7 +100,7 @@ export default function SodCalculator() {
       <div className="mb-6">
         <p className="text-sm font-medium text-gray-700 mb-1">Waste Buffer</p>
         <p className="text-xs text-gray-400 mb-2">
-          Sod cuts waste adds up fast. 5–10% recommended for straight runs; 10%+ for curved edges.
+          Cut pieces add up fast. Add 5% for straight rectangular lawns; 10% for curved or irregular edges.
         </p>
         <div className="flex gap-2">
           {([0, 5, 10] as Waste[]).map((w) => (
@@ -113,7 +113,7 @@ export default function SodCalculator() {
                   : 'border-gray-300 bg-white text-gray-700 hover:border-brand-400'
               }`}
             >
-              {w === 0 ? 'None' : `+${w}%`}
+              {w === 0 ? 'Exact' : `+${w}%`}
             </button>
           ))}
         </div>
@@ -123,14 +123,14 @@ export default function SodCalculator() {
       {hasInput ? (
         <>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 mb-4">
-            <ResultCard label="Area" value={areaSqFt.toFixed(0)} sub="sq ft" />
+            <ResultCard label="Rolls" value={rolls.toLocaleString()} sub="buying by the roll" />
+            <ResultCard label="Pallets" value={pallets.toLocaleString()} sub="bulk order (450 sq ft each)" />
+            <ResultCard label="Area" value={areaSqFt.toFixed(0)} sub="sq ft measured" />
             <ResultCard
-              label="With Waste"
+              label="With Overage"
               value={areaWithWaste.toFixed(0)}
-              sub={waste > 0 ? `sq ft (+${waste}%)` : 'sq ft'}
+              sub={waste > 0 ? `sq ft (+${waste}%)` : 'sq ft (exact)'}
             />
-            <ResultCard label="Rolls" value={rolls.toLocaleString()} sub="@ 10 sq ft each" />
-            <ResultCard label="Pallets" value={pallets.toLocaleString()} sub="@ 450 sq ft each" />
           </div>
           {pallets >= 2 && (
             <div className="rounded-lg border border-brand-300 bg-brand-50 px-4 py-3 text-sm text-brand-800">

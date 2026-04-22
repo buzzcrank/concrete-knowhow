@@ -124,9 +124,10 @@ export default function MulchCalculator() {
         </div>
       </div>
 
-      {/* Waste buffer */}
+      {/* Overage */}
       <div className="mb-6">
-        <p className="text-sm font-medium text-gray-700 mb-2">Waste Buffer</p>
+        <p className="text-sm font-medium text-gray-700 mb-1">Overage</p>
+        <p className="text-xs text-gray-400 mb-2">Round up to cover odd-shaped beds and avoid a second trip to the store.</p>
         <div className="flex gap-2">
           {([0, 5, 10] as Waste[]).map((w) => (
             <button
@@ -138,7 +139,7 @@ export default function MulchCalculator() {
                   : 'border-gray-300 bg-white text-gray-700 hover:border-brand-400'
               }`}
             >
-              {w === 0 ? 'None' : `+${w}%`}
+              {w === 0 ? 'Exact' : `+${w}%`}
             </button>
           ))}
         </div>
@@ -147,10 +148,10 @@ export default function MulchCalculator() {
       {/* Results */}
       {hasInput ? (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <ResultCard label="Cubic Feet" value={volFt3.toFixed(2)} sub="ft³" />
-          <ResultCard label="Cubic Yards" value={volYd3.toFixed(2)} sub="yd³" />
-          <ResultCard label="2 ft³ Bags" value={bags2.toLocaleString()} sub="bags needed" />
-          <ResultCard label="3 ft³ Bags" value={bags3.toLocaleString()} sub="bags needed" />
+          <ResultCard label="2 cu ft Bags" value={bags2.toLocaleString()} sub="standard bag at Lowe's / Home Depot" />
+          <ResultCard label="3 cu ft Bags" value={bags3.toLocaleString()} sub="large bag (less common)" />
+          <ResultCard label="Cubic Yards" value={volYd3.toFixed(2)} sub="order bulk by the yard" />
+          <ResultCard label="Cubic Feet" value={volFt3.toFixed(2)} sub="total volume" />
         </div>
       ) : (
         <div className="rounded-lg border border-gray-200 bg-white px-4 py-8 text-center text-sm text-gray-400">
