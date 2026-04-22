@@ -1,50 +1,178 @@
 # Concrete Knowhow — Full Reference
 
+All calculations are performed client-side. Results are estimates — always verify with your supplier and add 5–10% overage for real projects.
+
+---
+
 ## Concrete Slab Calculator
 
-Formulas:
-- Rectangular: vol_ft³ = length_ft × width_ft × thickness_ft
-- Round: vol_ft³ = π × (diameter_ft / 2)² × thickness_ft
-- vol_yd³ = vol_ft³ / 27
-- 60 lb bags = ceil(vol_ft³ / 0.45)
-- 80 lb bags = ceil(vol_ft³ / 0.60)
-- Waste buffer: +5% or +10% recommended
+URL: https://concrete.mrknowitall.net/concrete/
 
-Threshold: Ready-mix concrete is more economical above ~1 cubic yard (27 cubic feet).
+### Formulas
+- Rectangular slab: vol_ft³ = length_ft × width_ft × thickness_ft
+- Round slab: vol_ft³ = π × (diameter_ft / 2)² × thickness_ft
+- vol_yd³ = vol_ft³ ÷ 27
+- 60 lb bags = ceil(vol_ft³ ÷ 0.45)
+- 80 lb bags = ceil(vol_ft³ ÷ 0.60)
+- Ready-mix is more economical above ~1 cubic yard (≈ 45 bags of 80 lb)
+
+### Common Questions
+Q: How many bags of concrete for a 10×10 slab at 4 inches thick?
+A: 33.3 cu ft = 1.23 yd³. You need 75 bags of 60 lb mix or 56 bags of 80 lb mix.
+
+Q: How thick should a concrete slab be?
+A: Patios and driveways: 4 inches. Garage floors: 4–6 inches. Heavy-load slabs: 6–8 inches.
+
+Q: When does ready-mix make more sense than bags?
+A: Above roughly 1 cubic yard. At that volume the labor of mixing bags costs more than delivery.
+
+Q: How much does a cubic yard of concrete weigh?
+A: Approximately 3,900–4,050 lbs (about 2 tons) when wet.
+
+Q: Should I add overage when ordering concrete?
+A: Yes — add 5–10%. Subgrades are rarely perfectly level and running short mid-pour is a major problem.
+
+---
 
 ## Gravel Calculator
 
-Formulas:
+URL: https://concrete.mrknowitall.net/gravel/
+
+### Formulas
 - vol_ft³ = length_ft × width_ft × depth_ft
-- vol_yd³ = vol_ft³ / 27
-- tons = vol_yd³ × bulk_density (typically 1.4 t/yd³ for pea gravel, 1.5 for crushed stone)
+- vol_yd³ = vol_ft³ ÷ 27
+- tons = vol_yd³ × bulk_density
+
+### Bulk Densities
+- Crushed stone / gravel: 1.5 t/yd³
+- Pea gravel: 1.4 t/yd³
+- River rock: 1.35 t/yd³
+- Decomposed granite: 1.35 t/yd³
+- Lava rock: 0.8 t/yd³
+
+### Common Questions
+Q: How much gravel for a 10×20 ft driveway at 4 inches deep?
+A: 66.7 cu ft = 2.47 yd³ = ~3.7 tons of crushed stone. Add 10% for compaction.
+
+Q: How deep should gravel be for a driveway?
+A: 4–6 inch base of larger crushed stone (#3 or #4), topped with 2–3 inches of finish gravel. Total 6–8 inches for light vehicles.
+
+Q: How much does a ton of gravel cover?
+A: Pea gravel covers roughly 54 sq ft at 3 inches deep, or ~100 sq ft at 2 inches deep.
+
+Q: What is the difference between cubic yards and tons?
+A: Cubic yards measure volume; tons measure weight. Multiply yd³ by bulk density to convert.
+
+---
 
 ## Mulch Calculator
 
-Formulas:
+URL: https://concrete.mrknowitall.net/mulch/
+
+### Formulas
 - vol_ft³ = length_ft × width_ft × depth_ft
-- vol_yd³ = vol_ft³ / 27
-- 2 ft³ bags = ceil(vol_ft³ / 2)
-- 3 ft³ bags = ceil(vol_ft³ / 3)
+- vol_yd³ = vol_ft³ ÷ 27
+- 2 cu ft bags = ceil(vol_ft³ ÷ 2)  — standard bag at Lowe's / Home Depot
+- 3 cu ft bags = ceil(vol_ft³ ÷ 3)
+
+### Common Questions
+Q: How much mulch for a 10×20 ft bed at 3 inches deep?
+A: 50 cu ft = 1.85 yd³ = 25 bags of 2 cu ft mulch or 17 bags of 3 cu ft mulch.
+
+Q: How deep should mulch be?
+A: 2–4 inches. Standard recommendation is 3 inches — enough to suppress weeds and retain moisture without smothering roots. Keep mulch 2–3 inches away from plant stems and trunks.
+
+Q: How many bags of mulch equal a cubic yard?
+A: 27 cu ft per yd³ ÷ 2 cu ft per bag = 13.5 bags (2 cu ft); ÷ 3 cu ft = 9 bags (3 cu ft).
+
+Q: When is bulk mulch more economical than bags?
+A: Typically above 3 cubic yards. Bulk delivery is almost always cheaper per yard than bagged mulch.
+
+Q: How often should mulch be replaced?
+A: Top up every 1–2 years. Add a fresh 1–2 inch layer rather than replacing the entire bed.
+
+---
 
 ## Topsoil Calculator
 
-Formulas:
+URL: https://concrete.mrknowitall.net/topsoil/
+
+### Formulas
 - vol_ft³ = length_ft × width_ft × depth_ft
-- vol_yd³ = vol_ft³ / 27
-- Order 10–15% extra to account for settling
+- vol_yd³ = vol_ft³ ÷ 27
+- Recommended order = vol_yd³ × 1.10 to 1.15 (10–15% settling allowance)
+
+### Common Questions
+Q: How much topsoil for a 10×20 ft area at 4 inches deep?
+A: 66.7 cu ft = 2.47 yd³. With 10% settling, order 2.72 yd³.
+
+Q: Why order extra for settling?
+A: Bulk topsoil compacts 10–15% after watering and foot traffic. Order extra to end up at your target grade.
+
+Q: How deep should topsoil be for a new lawn?
+A: Minimum 4 inches; 6 inches preferred on poor or compacted native soil.
+
+Q: How much does a cubic yard of topsoil weigh?
+A: Roughly 1,800–2,200 lbs dry; over a ton when wet.
+
+Q: Difference between topsoil and fill dirt?
+A: Topsoil is nutrient-rich upper soil that supports plant growth. Fill dirt is subsoil used to fill voids — it contains little organic matter and should not be used as a growing medium.
+
+---
 
 ## Sand Calculator
 
-Formulas:
+URL: https://concrete.mrknowitall.net/sand/
+
+### Formulas
 - vol_ft³ = length_ft × width_ft × depth_ft
-- vol_yd³ = vol_ft³ / 27
-- tons = vol_yd³ × 1.35 (typical bulk density for dry sand)
+- vol_yd³ = vol_ft³ ÷ 27
+- tons = vol_yd³ × bulk_density
+
+### Bulk Densities
+- Dry sand: 1.35 t/yd³
+- Wet / packed sand: 1.68 t/yd³
+- Fill sand: 1.28 t/yd³
+- Mason sand: 1.44 t/yd³
+- Play sand: 1.20 t/yd³
+
+### Common Questions
+Q: How much sand for a 10×10 ft area at 2 inches deep?
+A: 16.7 cu ft = 0.62 yd³ = ~0.84 tons of dry sand.
+
+Q: How deep should the sand base be under pavers?
+A: Exactly 1 inch of coarse bedding sand over a 4-inch compacted gravel sub-base.
+
+Q: Difference between play sand and fill sand?
+A: Play sand is washed and rounded — safe for sandboxes. Fill sand is coarser and used for sub-base. Never use fill sand in a sandbox.
+
+Q: Can I use sand to level a lawn?
+A: Pure sand is not recommended — use a 50/50 sand/compost topdressing mix instead.
+
+---
 
 ## Sod Calculator
 
-Formulas:
+URL: https://concrete.mrknowitall.net/sod/
+
+### Formulas
 - area_ft² = length_ft × width_ft
-- rolls = ceil(area_ft² / 10) — standard roll covers ~10 ft²
-- pallets = ceil(area_ft² / 450) — standard pallet covers 450–500 ft²
-- Order 5–10% extra for cuts and waste
+- rolls = ceil(area_ft² × overage_multiplier ÷ 10)   — 1 roll = 10 sq ft
+- pallets = ceil(area_ft² × overage_multiplier ÷ 450) — 1 pallet = 450 sq ft
+- Recommended overage: 5% for straight rectangular areas; 10% for curved edges
+
+### Common Questions
+Q: How many rolls of sod for a 20×20 ft lawn?
+A: 400 sq ft ÷ 10 sq ft per roll = 40 rolls + 5% = 42 rolls (less than one pallet).
+
+Q: How much does a pallet of sod cover?
+A: 450–504 sq ft depending on supplier. This calculator uses 450 sq ft as a conservative estimate.
+
+Q: When is the best time to lay sod?
+A: Cool-season grasses (fescue, bluegrass): fall or early spring. Warm-season grasses (Bermuda, zoysia, St. Augustine): late spring through summer when soil is above 60°F.
+
+Q: How long does sod take to root?
+A: 2–6 weeks. Keep it moist and off the lawn. It has rooted when you tug a corner and it resists.
+
+Q: How do I prepare ground for sod?
+A: Till 4–6 inches, remove debris, grade away from structures, add topsoil if needed, firm the surface, water lightly before laying.

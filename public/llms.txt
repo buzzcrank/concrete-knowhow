@@ -1,16 +1,27 @@
 # Concrete Knowhow
 
-Free, accurate calculators for concrete, gravel, mulch, topsoil, sand, and sod.
+> Free, accurate construction material calculators for concrete, gravel, mulch, topsoil, sand, and sod. All calculations run in the browser — no sign-up, no data collection.
+
+Concrete Knowhow helps homeowners and contractors estimate material quantities for outdoor and construction projects. Enter dimensions, get instant results in cubic yards, tons, or bag counts.
 
 ## Calculators
 
-- [Concrete Slab Calculator](https://concrete.mrknowitall.net/concrete/) — cubic yards, 60 lb and 80 lb bag counts
-- [Gravel Calculator](https://concrete.mrknowitall.net/gravel/) — cubic yards and tons
-- [Mulch Calculator](https://concrete.mrknowitall.net/mulch/) — cubic yards and bag counts
-- [Topsoil Calculator](https://concrete.mrknowitall.net/topsoil/) — cubic yards with settling allowance
-- [Sand Calculator](https://concrete.mrknowitall.net/sand/) — cubic yards and tons
-- [Sod Calculator](https://concrete.mrknowitall.net/sod/) — rolls and pallets
+- [Concrete Slab Calculator](https://concrete.mrknowitall.net/concrete/): Cubic yards and bag counts (60 lb / 80 lb) for rectangular or round slabs. Includes ready-mix advisory above 1 yd³.
+- [Gravel Calculator](https://concrete.mrknowitall.net/gravel/): Cubic yards and tons for driveways, paths, and drainage. Five material types with bulk density conversion.
+- [Mulch Calculator](https://concrete.mrknowitall.net/mulch/): Cubic yards plus 2 cu ft and 3 cu ft bag counts for garden beds and landscape areas.
+- [Topsoil Calculator](https://concrete.mrknowitall.net/topsoil/): Cubic yards with 10–15% settling allowance so you order enough to end up at your target depth.
+- [Sand Calculator](https://concrete.mrknowitall.net/sand/): Cubic yards and tons for leveling, fill, and paver bases. Five sand types with per-type bulk density.
+- [Sod Calculator](https://concrete.mrknowitall.net/sod/): Square footage, rolls (10 sq ft each), and pallets (450 sq ft each) for any lawn area.
 
-## About
+## Key Formulas
 
-All calculations are performed client-side. No data is collected.
+- Rectangular volume: L(ft) × W(ft) × D(ft) = cubic feet; ÷ 27 = cubic yards
+- Circular volume: π × (diameter/2)² × depth(ft) = cubic feet
+- Concrete: 60 lb bag = 0.45 cu ft; 80 lb bag = 0.60 cu ft
+- Mulch: standard bag at Lowe's / Home Depot = 2 cu ft
+- Gravel/sand weight: cubic yards × bulk density (t/yd³)
+- Sod: 1 roll = 10 sq ft; 1 pallet = 450 sq ft
+
+## Optional
+
+- [Full reference with formulas, thresholds, and FAQ answers](https://concrete.mrknowitall.net/llms-full.txt)

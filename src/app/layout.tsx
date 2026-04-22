@@ -8,17 +8,35 @@ import { orgSchema, websiteSchema } from '@/lib/schema'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const SITE_URL = 'https://concrete.mrknowitall.net'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://concrete.mrknowitall.net'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Concrete Knowhow — Free Construction Calculators',
     template: '%s | Concrete Knowhow',
   },
   description:
-    'Free, accurate calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results.',
+    'Free, accurate calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results — no sign-up required.',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
     siteName: 'Concrete Knowhow',
     type: 'website',
+    url: SITE_URL,
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Concrete Knowhow — Free Construction Calculators',
+    description:
+      'Free calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results.',
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 }
 
