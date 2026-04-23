@@ -21,8 +21,9 @@ export async function submitContact(
 
   if (!to) return { error: 'Contact form is not configured.' }
 
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
       from: `Contact Form <${from}>`,
       to,
