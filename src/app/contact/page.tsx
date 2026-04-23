@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import EmailLink from './EmailLink'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -15,10 +16,8 @@ export default function ContactPage() {
         hear from you.
       </p>
       <p>
-        Email us at{' '}
-        <a href="mailto:hello@mrknowitall.net">hello@mrknowitall.net</a>
+        <EmailLink label="Send us an email" /> — we aim to respond within 2 business days.
       </p>
-      <p>We aim to respond within 2 business days.</p>
     </article>
   )
 }
