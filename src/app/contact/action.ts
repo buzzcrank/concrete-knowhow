@@ -26,7 +26,6 @@ export async function submitContact(
     await resend.emails.send({
       from: `Contact Form <${from}>`,
       to,
-      replyTo: email,
       subject: subject ? `[Contact] ${subject}` : `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     })
