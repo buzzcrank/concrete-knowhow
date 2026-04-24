@@ -5,9 +5,19 @@ export function orgSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/Mr-Know-It-All-%20logo.jpg`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/Mr-Know-It-All-%20logo.jpg`,
+    },
+    description:
+      'Free construction material calculators for concrete, gravel, mulch, topsoil, sand, and sod. Part of the Mr. Know-It-All network.',
+    sameAs: [
+      'https://mrknowitall.net',
+      'https://tenant.mrknowitall.net',
+    ],
   }
 }
 
@@ -15,16 +25,12 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
     name: SITE_NAME,
     url: SITE_URL,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
+    description: 'Free construction material calculators for DIYers and professionals.',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    inLanguage: 'en-US',
   }
 }
 
@@ -74,5 +80,6 @@ export function webApplicationSchema(opts: {
       price: '0',
       priceCurrency: 'USD',
     },
+    publisher: { '@id': `${SITE_URL}/#organization` },
   }
 }
