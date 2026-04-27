@@ -44,9 +44,6 @@ export const metadata: Metadata = {
       'Free calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results.',
     images: ['/Mr-Know-It-All-%20logo.jpg'],
   },
-  alternates: {
-    canonical: SITE_URL,
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
