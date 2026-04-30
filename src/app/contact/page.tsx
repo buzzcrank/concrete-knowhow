@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Contact',
   description: 'Contact the Concrete Knowhow team with questions, corrections, or feedback.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/contact/' },
+  robots: { index: false, follow: false },
 }
 
 export default function ContactPage() {

@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Disclaimer',
   description: 'Disclaimer for Concrete Knowhow calculator tools and content.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/disclaimer/' },
+  robots: { index: false, follow: false },
 }
 
 export default function DisclaimerPage() {
@@ -24,7 +25,7 @@ export default function DisclaimerPage() {
       <p>
         Material coverage rates, bag sizes, and bulk densities can vary by manufacturer and
         region. Use these results as a starting point, and always add an appropriate waste buffer
-        (5–10%) for real projects.
+        (5&ndash;10%) for real projects.
       </p>
     </article>
   )

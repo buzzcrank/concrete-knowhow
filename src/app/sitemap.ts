@@ -5,7 +5,6 @@ const LAST_MODIFIED = new Date('2026-04-27')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const calculators = ['/concrete', '/gravel', '/mulch', '/topsoil', '/sand', '/sod']
-  const staticPages = ['/about', '/contact', '/disclaimer', '/privacy', '/terms']
 
   return [
     {
@@ -20,11 +19,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     })),
-    ...staticPages.map((route) => ({
-      url: `${BASE}${route}/`,
+    {
+      url: `${BASE}/about/`,
       lastModified: LAST_MODIFIED,
       changeFrequency: 'yearly' as const,
       priority: 0.4,
-    })),
+    },
   ]
 }

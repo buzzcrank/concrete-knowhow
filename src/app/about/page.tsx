@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'About Concrete Knowhow — Free Construction Material Calculators',
   description: 'Learn about Concrete Knowhow — free construction material calculators for DIYers and contractors.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/about/' },
 }
@@ -23,11 +23,11 @@ export default function AboutPage() {
       </p>
       <h2>How It Works</h2>
       <p>
-        All calculations run directly in your browser — nothing is sent to a server. Enter your
+        All calculations run directly in your browser &mdash; nothing is sent to a server. Enter your
         dimensions, select your waste buffer if needed, and get instant results.
       </p>
       <p>
-        Always verify quantities with your supplier before ordering, and add a 5–10% waste buffer
+        Always verify quantities with your supplier before ordering, and add a 5&ndash;10% waste buffer
         for any real project.
       </p>
     </article>

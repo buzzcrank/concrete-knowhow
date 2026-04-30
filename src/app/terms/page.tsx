@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Terms of Use',
   description: 'Terms of use for Concrete Knowhow.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/terms/' },
+  robots: { index: false, follow: false },
 }
 
 export default function TermsPage() {
@@ -18,7 +19,7 @@ export default function TermsPage() {
       <h2>Use of Calculators</h2>
       <p>
         The calculators are provided free of charge for personal and commercial estimation
-        purposes. Results are estimates only — see our{' '}
+        purposes. Results are estimates only &mdash; see our{' '}
         <a href="/disclaimer/">Disclaimer</a> for full details.
       </p>
       <h2>Intellectual Property</h2>

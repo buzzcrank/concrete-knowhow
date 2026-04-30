@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy policy for Concrete Knowhow.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/privacy/' },
+  robots: { index: false, follow: false },
 }
 
 export default function PrivacyPage() {
