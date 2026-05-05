@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   },
   description:
     'Free, accurate calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results — no sign-up required.',
+  authors: [{ name: 'Concrete Knowhow', url: SITE_URL }],
   robots: {
     index: true,
     follow: true,
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
         url: '/Mr-Know-It-All-%20logo.jpg',
         width: 1400,
         height: 735,
-        alt: 'Mr. Knoi It All — Concrete Knowhow',
+        alt: 'Mr. Know-It-All — Concrete Knowhow',
       },
     ],
   },

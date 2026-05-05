@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'Calculate how much sand you need for any project. Instant cubic yard and ton results for leveling, fill, play areas, and more. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/sand/' },
+  openGraph: {
+    type: 'article',
+    publishedTime: '2024-04-01',
+    modifiedTime: '2026-05-05',
+  },
 }
 
 const faqs = [
@@ -88,7 +93,7 @@ export default function SandPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Sand Calculator
       </h1>
-      <PageMeta lastUpdated="April 2024" readingTime="4 min" />
+      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
 
       <QuickAnswer>
         Select your sand type, enter the area dimensions and depth, and get instant cubic

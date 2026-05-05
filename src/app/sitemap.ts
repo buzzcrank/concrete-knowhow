@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 const BASE = 'https://concrete.mrknowitall.net'
-const LAST_MODIFIED = new Date('2026-04-27')
+const LAST_MODIFIED = new Date('2026-05-05')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const calculators = ['/concrete', '/gravel', '/mulch', '/topsoil', '/sand', '/sod']
@@ -24,6 +24,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_MODIFIED,
       changeFrequency: 'yearly' as const,
       priority: 0.4,
+    },
+    {
+      url: `${BASE}/contact/`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${BASE}/disclaimer/`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
+    },
+    {
+      url: `${BASE}/privacy/`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
+    },
+    {
+      url: `${BASE}/terms/`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
     },
   ]
 }

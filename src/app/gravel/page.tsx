@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'Calculate how much gravel, crushed stone, or river rock you need. Instant cubic yard and ton results for driveways, paths, and drainage. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/gravel/' },
+  openGraph: {
+    type: 'article',
+    publishedTime: '2024-04-01',
+    modifiedTime: '2026-05-05',
+  },
 }
 
 const faqs = [
@@ -88,7 +93,7 @@ export default function GravelPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Gravel Calculator
       </h1>
-      <PageMeta lastUpdated="April 2024" readingTime="4 min" />
+      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
 
       <QuickAnswer>
         Enter your area&apos;s length, width, and depth, then choose your material to instantly

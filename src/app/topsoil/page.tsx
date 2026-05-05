@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'Calculate how much topsoil you need for any lawn or garden project. Instant cubic yard results with a built-in settling allowance. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/topsoil/' },
+  openGraph: {
+    type: 'article',
+    publishedTime: '2024-04-01',
+    modifiedTime: '2026-05-05',
+  },
 }
 
 const faqs = [
@@ -88,7 +93,7 @@ export default function TopsoilPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Topsoil Calculator
       </h1>
-      <PageMeta lastUpdated="April 2024" readingTime="4 min" />
+      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
 
       <QuickAnswer>
         Enter your area&apos;s length, width, and depth to get cubic feet, cubic yards, and

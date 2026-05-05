@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'Calculate how many rolls and pallets of sod you need for any lawn area. Instant results with a waste buffer for cuts. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/sod/' },
+  openGraph: {
+    type: 'article',
+    publishedTime: '2024-04-01',
+    modifiedTime: '2026-05-05',
+  },
 }
 
 const faqs = [
@@ -88,7 +93,7 @@ export default function SodPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Sod Calculator
       </h1>
-      <PageMeta lastUpdated="April 2024" readingTime="4 min" />
+      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
 
       <QuickAnswer>
         Enter your lawn&apos;s length and width to instantly get square footage, roll count

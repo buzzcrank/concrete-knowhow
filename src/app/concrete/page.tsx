@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'Calculate how much concrete you need for any slab. Instant results: cubic feet, cubic yards, and 60 lb or 80 lb bag counts. Free and accurate.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/concrete/' },
+  openGraph: {
+    type: 'article',
+    publishedTime: '2024-04-01',
+    modifiedTime: '2026-05-05',
+  },
 }
 
 const faqs = [
@@ -88,7 +93,7 @@ export default function ConcretePage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Concrete Slab Calculator
       </h1>
-      <PageMeta lastUpdated="April 2024" readingTime="4 min" />
+      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
 
       <QuickAnswer>
         Enter your slab&apos;s length, width, and thickness to instantly calculate cubic feet,

@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'Calculate how much mulch you need for any garden bed or landscape area. Instant cubic yard results plus 2 ft³ and 3 ft³ bag counts. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/mulch/' },
+  openGraph: {
+    type: 'article',
+    publishedTime: '2024-04-01',
+    modifiedTime: '2026-05-05',
+  },
 }
 
 const faqs = [
@@ -88,7 +93,7 @@ export default function MulchPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Mulch Calculator
       </h1>
-      <PageMeta lastUpdated="April 2024" readingTime="4 min" />
+      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
 
       <QuickAnswer>
         Enter your bed&apos;s length, width, and desired depth to instantly get cubic feet,
