@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import JsonLd from '@/components/JsonLd'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Free Construction Material Calculators',
+  title: 'Free Construction Material Calculators — Concrete, Gravel, Mulch & More',
   description:
-    'Calculate exactly how much concrete, gravel, mulch, topsoil, sand, or sod you need. Free, instant results — no sign-up required.',
+    'Calculate exactly how much concrete, gravel, mulch, topsoil, sand, or sod you need. Free, instant results with cubic yard and ton conversions — no sign-up required.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/' },
+  openGraph: {
+    type: 'website',
+    url: 'https://concrete.mrknowitall.net/',
+    title: 'Free Construction Material Calculators — Concrete, Gravel, Mulch & More',
+    description: 'Calculate exactly how much concrete, gravel, mulch, topsoil, sand, or sod you need. Instant cubic yard and ton results — free.',
+  },
 }
 
 const tools = [
@@ -49,30 +57,37 @@ const tools = [
 
 const faqs = [
   {
-    q: 'How many bags of concrete do I need for a 10×10 slab at 4 inches thick?',
-    a: 'A 10×10 slab at 4 inches (0.333 ft) thick is 33.3 cubic feet, or about 1.23 cubic yards. You would need 74 bags of 60 lb concrete mix or 56 bags of 80 lb mix. At this volume, ready-mix delivery is worth getting quotes on.',
+    question: 'How many bags of concrete do I need for a 10×10 slab at 4 inches thick?',
+    answer: 'A 10×10 slab at 4 inches (0.333 ft) thick is 33.3 cubic feet, or about 1.23 cubic yards. You would need 74 bags of 60 lb concrete mix or 56 bags of 80 lb mix. At this volume, ready-mix delivery is worth getting quotes on.',
   },
   {
-    q: 'How do I convert cubic feet to cubic yards?',
-    a: 'Divide cubic feet by 27. There are 27 cubic feet in one cubic yard (3 ft × 3 ft × 3 ft = 27 ft³).',
+    question: 'How do I convert cubic feet to cubic yards?',
+    answer: 'Divide cubic feet by 27. There are 27 cubic feet in one cubic yard (3 ft × 3 ft × 3 ft = 27 ft³).',
   },
   {
-    q: 'How much does a cubic yard of concrete weigh?',
-    a: 'A cubic yard of concrete weighs approximately 3,900–4,050 pounds (about 2 tons) when wet.',
+    question: 'How much does a cubic yard of concrete weigh?',
+    answer: 'A cubic yard of concrete weighs approximately 3,900–4,050 pounds (about 2 tons) when wet.',
   },
   {
-    q: 'When should I use ready-mix instead of bags?',
-    a: 'Ready-mix concrete becomes more economical at volumes above 1 cubic yard (roughly 27 bags). For larger pours, always get ready-mix quotes.',
+    question: 'When should I use ready-mix instead of bags?',
+    answer: 'Ready-mix concrete becomes more economical at volumes above 1 cubic yard (roughly 27 bags). For larger pours, always get ready-mix quotes.',
   },
   {
-    q: 'Why should I add a waste buffer?',
-    a: "Adding 5–10% extra accounts for spillage, uneven subgrades, and forms that aren't perfectly square. It's much cheaper to have a little left over than to run short mid-pour.",
+    question: 'Why should I add a waste buffer?',
+    answer: "Adding 5–10% extra accounts for spillage, uneven subgrades, and forms that aren't perfectly square. It's much cheaper to have a little left over than to run short mid-pour.",
   },
 ]
+
+const SITE = 'https://concrete.mrknowitall.net'
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([{ name: 'Home', url: `${SITE}/` }])}
+      />
+      <JsonLd data={faqSchema(faqs)} />
+
       <section className="py-10 text-center">
         <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
           Construction Material Calculators
@@ -80,6 +95,23 @@ export default function HomePage() {
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
           Find out exactly how much concrete, gravel, mulch, topsoil, sand, or sod you need —
           instantly and for free.
+        </p>
+      </section>
+
+      <section className="mb-10 prose prose-gray max-w-none">
+        <p>
+          Ordering the wrong amount of concrete or gravel is one of the most common (and
+          expensive) mistakes on DIY projects. Too little means a second delivery and a
+          cold joint; too much means wasted money and a disposal problem. These calculators
+          give you the exact cubic yards, cubic feet, and — where relevant — tons or bag
+          counts for your project dimensions, with a built-in waste buffer option so you
+          order right the first time.
+        </p>
+        <p>
+          Every calculator on this site works the same way: enter your dimensions, pick
+          your unit of measure, and get instant results. No account required, no
+          upsells — just the numbers you need before you call the supply yard or head to
+          the hardware store.
         </p>
       </section>
 
@@ -103,9 +135,9 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         <dl className="space-y-6">
           {faqs.map((faq) => (
-            <div key={faq.q} className="rounded-lg border border-gray-100 bg-gray-50 px-5 py-4">
-              <dt className="font-semibold text-gray-800">{faq.q}</dt>
-              <dd className="mt-2 text-sm text-gray-600">{faq.a}</dd>
+            <div key={faq.question} className="rounded-lg border border-gray-100 bg-gray-50 px-5 py-4">
+              <dt className="font-semibold text-gray-800">{faq.question}</dt>
+              <dd className="mt-2 text-sm text-gray-600">{faq.answer}</dd>
             </div>
           ))}
         </dl>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://concrete.mrknowitall.net/gravel/' },
   openGraph: {
     type: 'article',
-    publishedTime: '2024-04-01',
+    publishedTime: '2026-04-01',
     modifiedTime: '2026-05-05',
   },
 }

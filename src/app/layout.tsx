@@ -51,8 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <JsonLd data={orgSchema()} />
-        <JsonLd data={websiteSchema()} />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
             <script
@@ -68,6 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
+        <JsonLd data={orgSchema()} />
+        <JsonLd data={websiteSchema()} />
         <Header />
         <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
         <Footer />
