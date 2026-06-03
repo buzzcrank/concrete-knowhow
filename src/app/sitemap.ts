@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 const BASE = 'https://concrete.mrknowitall.net'
-const LAST_MODIFIED = new Date('2026-05-05')
+const LAST_MODIFIED = new Date('2026-06-03')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const calculators = ['/concrete', '/gravel', '/mulch', '/topsoil', '/sand', '/sod']
