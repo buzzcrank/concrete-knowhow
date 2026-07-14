@@ -134,7 +134,7 @@ export default function SodCalculator() {
           </div>
           {pallets >= 2 && (
             <div className="rounded-lg border border-brand-300 bg-brand-50 px-4 py-3 text-sm text-brand-800">
-              <strong>Tip:</strong> At {pallets} pallets, ask your supplier about pallet pricing — it&apos;s
+              <strong>Tip:</strong> At {pallets} pallets, ask your supplier about pallet pricing, since it&apos;s
               often cheaper per sq ft than ordering by the roll.
             </div>
           )}

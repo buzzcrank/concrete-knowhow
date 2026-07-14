@@ -13,11 +13,11 @@ const SITE_URL = 'https://concrete.mrknowitall.net'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Concrete Knowhow — Free Construction Calculators',
+    default: 'Concrete Knowhow: Free Construction Calculators',
     template: '%s | Concrete Knowhow',
   },
   description:
-    'Free, accurate calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results — no sign-up required.',
+    'Free, accurate calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results. No sign-up required.',
   authors: [{ name: 'Concrete Knowhow', url: SITE_URL }],
   robots: {
     index: true,
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: '/Mr-Know-It-All-%20logo.jpg',
         width: 1400,
         height: 735,
-        alt: 'Mr. Know-It-All — Concrete Knowhow',
+        alt: 'Mr. Know-It-All Concrete Knowhow',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Concrete Knowhow — Free Construction Calculators',
+    title: 'Concrete Knowhow: Free Construction Calculators',
     description:
       'Free calculators for concrete, gravel, mulch, topsoil, sand, and sod. Instant cubic yard and bag count results.',
     images: ['/Mr-Know-It-All-%20logo.jpg'],

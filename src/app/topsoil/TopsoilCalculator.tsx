@@ -125,7 +125,7 @@ export default function TopsoilCalculator() {
       <div className="mb-6">
         <p className="text-sm font-medium text-gray-700 mb-1">Settling Allowance</p>
         <p className="text-xs text-gray-400 mb-2">
-          Topsoil compacts 10–15% after delivery. Order extra so you end up at your target depth — not short.
+          Topsoil compacts 10–15% after delivery. Order extra so you end up at your target depth, not short.
         </p>
         <div className="flex gap-2">
           {([0, 10, 15] as Settling[]).map((s) => (

@@ -8,14 +8,14 @@ import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, faqSchema, webApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Gravel Calculator — Cubic Yards & Tons',
+  title: 'Gravel Calculator: Cubic Yards and Tons',
   description:
     'Calculate how much gravel, crushed stone, or river rock you need. Instant cubic yard and ton results for driveways, paths, and drainage. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/gravel/' },
   openGraph: {
     type: 'article',
     publishedTime: '2026-04-01',
-    modifiedTime: '2026-05-05',
+    modifiedTime: '2026-07-14',
   },
 }
 
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'What is the difference between cubic yards and tons for gravel?',
     answer:
-      'Cubic yards measure volume; tons measure weight. Gravel is sold by both, depending on the supplier. To convert, multiply cubic yards by the bulk density of your material — typically 1.4 t/yd³ for pea gravel and 1.5 t/yd³ for crushed stone.',
+      'Cubic yards measure volume; tons measure weight. Gravel is sold by both, depending on the supplier. To convert, multiply cubic yards by the bulk density of your material, typically 1.4 t/yd³ for pea gravel and 1.5 t/yd³ for crushed stone.',
   },
   {
     question: 'How much gravel do I need for a French drain?',
@@ -48,7 +48,7 @@ const faqs = [
   {
     question: 'Should I add a waste buffer for gravel?',
     answer:
-      'Yes — add 10% for driveways and paths to account for compaction and settling. For decorative beds you can get away with 5%. It is almost always cheaper to have a little left over than to order a second delivery.',
+      'Yes. Add 10% for driveways and paths to account for compaction and settling. For decorative beds you can get away with 5%. It is almost always cheaper to have a little left over than to order a second delivery.',
   },
 ]
 
@@ -93,11 +93,11 @@ export default function GravelPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Gravel Calculator
       </h1>
-      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
+      <PageMeta lastUpdated="July 2026" readingTime="7 min" />
 
       <QuickAnswer>
         Enter your area&apos;s length, width, and depth, then choose your material to instantly
-        get cubic feet, cubic yards, and tons — with an optional waste buffer for compaction.
+        get cubic feet, cubic yards, and tons, with an optional waste buffer for compaction.
       </QuickAnswer>
 
       <GravelCalculator />
@@ -107,7 +107,7 @@ export default function GravelPage() {
       {/* Reference table */}
       <section className="my-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Common Coverage Areas — Quick Reference
+          Common Coverage Areas: Quick Reference
         </h2>
         <p className="text-sm text-gray-500 mb-3">
           Tons calculated using crushed stone (1.5 t/yd³). No waste buffer included.
@@ -135,9 +135,67 @@ export default function GravelPage() {
         </div>
       </section>
 
+      {/* Gravel types */}
+      <section className="my-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Gravel Types and When to Use Each One
+        </h2>
+        <p className="text-sm text-gray-600 mb-3">
+          Gravel is not one product. The right choice depends on whether the material needs to
+          compact into a firm surface (angular crushed stone locks together) or stay loose and
+          decorative (rounded stone does not lock). Densities below are typical bulk values;
+          your supplier can give exact numbers for their stock.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-gray-200">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-50 border-b border-gray-200">
+              <tr>
+                {['Type', 'Size', 'Typical Density', 'Best For'].map((h) => (
+                  <th key={h} className="px-4 py-3 font-semibold text-gray-600">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Crushed stone #57</td><td className="px-4 py-3 text-gray-600">0.75 to 1 in</td><td className="px-4 py-3 text-gray-600">1.4 to 1.5 t/yd³</td><td className="px-4 py-3 text-gray-600">Driveway top layer, drainage, concrete base</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Crushed stone #3 / #4</td><td className="px-4 py-3 text-gray-600">1 to 2.5 in</td><td className="px-4 py-3 text-gray-600">1.4 to 1.6 t/yd³</td><td className="px-4 py-3 text-gray-600">Driveway base layer, heavy drainage</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Pea gravel</td><td className="px-4 py-3 text-gray-600">0.25 to 0.5 in</td><td className="px-4 py-3 text-gray-600">1.3 to 1.4 t/yd³</td><td className="px-4 py-3 text-gray-600">Paths, playgrounds, between pavers</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Crusher run / road base</td><td className="px-4 py-3 text-gray-600">Fines to 1 in</td><td className="px-4 py-3 text-gray-600">1.5 to 1.7 t/yd³</td><td className="px-4 py-3 text-gray-600">Compacted bases under pavers and sheds</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Decomposed granite</td><td className="px-4 py-3 text-gray-600">Fines to 0.25 in</td><td className="px-4 py-3 text-gray-600">1.4 to 1.6 t/yd³</td><td className="px-4 py-3 text-gray-600">Natural-look paths and patios</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">River rock</td><td className="px-4 py-3 text-gray-600">1 to 3 in</td><td className="px-4 py-3 text-gray-600">1.3 to 1.4 t/yd³</td><td className="px-4 py-3 text-gray-600">Decorative beds, dry creek beds</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Formula and worked example */}
+      <section className="my-10 prose prose-gray max-w-none">
+        <h2>How the Gravel Math Works</h2>
+        <p>
+          Volume first: length in feet times width in feet times depth in feet gives cubic
+          feet, and dividing by 27 gives cubic yards. Depth is normally in inches, so divide
+          it by 12 before multiplying. To convert cubic yards to tons, multiply by the bulk
+          density of your material, typically 1.4 tons per cubic yard for pea gravel and 1.5
+          for crushed stone.
+        </p>
+        <p>
+          <strong>Worked example.</strong> A 12 ft by 40 ft driveway topped with 3 inches of
+          #57 crushed stone: 3 divided by 12 is 0.25 ft. Multiply 12 by 40 by 0.25 to get 120
+          cubic feet, then divide by 27 to get 4.44 cubic yards. At 1.5 tons per yard that is
+          about 6.7 tons. Add 10 percent for compaction and order roughly 7.3 tons. Most
+          suppliers deliver by the ton, and a typical single-axle dump truck carries about 10
+          tons, so this fits in one delivery.
+        </p>
+        <p>
+          Why the buffer matters for gravel specifically: angular stone compacts 10 to 15
+          percent when driven on or plate-compacted. A driveway that measures perfect on day
+          one will look thin after the first month of traffic if you ordered the bare
+          calculated volume.
+        </p>
+      </section>
+
       {/* How-to guide */}
       <section className="my-10 prose prose-gray max-w-none">
-        <h2>How to Lay a Gravel Driveway or Path — Step by Step</h2>
+        <h2>How to Lay a Gravel Driveway or Path, Step by Step</h2>
         <ol>
           <li>
             <strong>Mark the area.</strong> Use stakes and string or marking paint to outline
@@ -145,7 +203,7 @@ export default function GravelPage() {
           </li>
           <li>
             <strong>Excavate.</strong> Dig down 6–8 inches for a driveway, or 3–4 inches for a
-            decorative path. Remove all grass and organic material — it will decompose and cause
+            decorative path. Remove all grass and organic material, which will decompose and cause
             settling.
           </li>
           <li>
@@ -158,7 +216,7 @@ export default function GravelPage() {
             grade.
           </li>
           <li>
-            <strong>Lay landscape fabric (optional).</strong> For driveways, skip fabric — it
+            <strong>Lay landscape fabric (optional).</strong> For driveways, skip fabric, because it
             tears under vehicle weight. For paths and decorative beds, fabric under the gravel
             helps suppress weeds.
           </li>
@@ -171,7 +229,7 @@ export default function GravelPage() {
             gravel, #57 stone, or decomposed granite). Rake level.
           </li>
           <li>
-            <strong>Compact and top up.</strong> Compact the surface — gravel will settle
+            <strong>Compact and top up.</strong> Compact the surface. Gravel will settle
             10–15%. Top up as needed, especially after the first few rains.
           </li>
         </ol>

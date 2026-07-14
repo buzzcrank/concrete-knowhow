@@ -8,14 +8,14 @@ import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, faqSchema, webApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Sod Calculator — Rolls & Pallets',
+  title: 'Sod Calculator: Rolls and Pallets',
   description:
     'Calculate how many rolls and pallets of sod you need for any lawn area. Instant results with a waste buffer for cuts. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/sod/' },
   openGraph: {
     type: 'article',
     publishedTime: '2026-04-01',
-    modifiedTime: '2026-05-05',
+    modifiedTime: '2026-07-14',
   },
 }
 
@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'How many rolls of sod do I need for a 20×20 ft lawn?',
     answer:
-      'A 20×20 ft lawn is 400 sq ft. At 10 sq ft per roll, you need 40 rolls — plus a 5–10% waste buffer for cuts, so order 42–44 rolls. That is less than one pallet (typically 450 sq ft).',
+      'A 20×20 ft lawn is 400 sq ft. At 10 sq ft per roll, you need 40 rolls plus a 5–10% waste buffer for cuts, so order 42–44 rolls. That is less than one pallet (typically 450 sq ft).',
   },
   {
     question: 'How much does a pallet of sod cover?',
@@ -48,7 +48,7 @@ const faqs = [
   {
     question: 'How long does sod take to root?',
     answer:
-      'Sod roots into the soil in 2–6 weeks under good conditions. Keep it moist (water daily for the first 2 weeks) and off the lawn. After 6 weeks, tug a corner — if it resists, it has rooted.',
+      'Sod roots into the soil in 2–6 weeks under good conditions. Keep it moist (water daily for the first 2 weeks) and stay off the lawn. After 6 weeks, tug a corner: if it resists, it has rooted.',
   },
 ]
 
@@ -93,11 +93,11 @@ export default function SodPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Sod Calculator
       </h1>
-      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
+      <PageMeta lastUpdated="July 2026" readingTime="7 min" />
 
       <QuickAnswer>
         Enter your lawn&apos;s length and width to instantly get square footage, roll count
-        (at 10 sq ft per roll), and pallet count (at 450 sq ft per pallet) — with a waste
+        (at 10 sq ft per roll), and pallet count (at 450 sq ft per pallet), with a waste
         buffer for cuts and edges.
       </QuickAnswer>
 
@@ -107,7 +107,7 @@ export default function SodPage() {
 
       <section className="my-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Common Lawn Sizes — Quick Reference
+          Common Lawn Sizes: Quick Reference
         </h2>
         <p className="text-sm text-gray-500 mb-3">
           All values include a 5% waste buffer. Pallets based on 450 sq ft coverage.
@@ -135,8 +135,60 @@ export default function SodPage() {
         </div>
       </section>
 
+      {/* Measuring guidance */}
       <section className="my-10 prose prose-gray max-w-none">
-        <h2>How to Lay Sod — Step by Step</h2>
+        <h2>How to Measure an Irregular Lawn</h2>
+        <p>
+          Few lawns are perfect rectangles. The reliable method is to break the space into
+          simple shapes, calculate each, and add them up. Rectangles are length times width.
+          Triangles are half of base times height. Circles are 3.14 times the radius squared;
+          for a half-circle against a patio, take half of that. Sketch the yard on paper,
+          split it into these shapes, and measure each one with a tape or measuring wheel.
+        </p>
+        <p>
+          <strong>Worked example.</strong> A yard with a 30 ft by 40 ft main rectangle (1,200
+          sq ft), a 15 ft by 20 ft side strip (300 sq ft), and a half-circle bed cutout with a
+          10 ft radius to subtract (157 sq ft): total sod area is 1,200 plus 300 minus 157,
+          which is 1,343 sq ft. At 10 sq ft per roll with a 5 percent buffer, order 142 rolls,
+          or about 3 pallets. Measure twice: sod is perishable and cannot be returned once
+          cut, so an accurate count matters more than with any other landscape material.
+        </p>
+      </section>
+
+      {/* Grass type guidance */}
+      <section className="my-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Warm-Season or Cool-Season Grass?
+        </h2>
+        <p className="text-sm text-gray-600 mb-3">
+          Sod availability is regional because turfgrass falls into two climate groups. Your
+          local sod farm will carry what grows in your area, but knowing the group helps you
+          time the project and compare quotes.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-gray-200">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-50 border-b border-gray-200">
+              <tr>
+                {['Group', 'Common Varieties', 'Region', 'Best Time to Lay'].map((h) => (
+                  <th key={h} className="px-4 py-3 font-semibold text-gray-600">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Cool-season</td><td className="px-4 py-3 text-gray-600">Kentucky bluegrass, tall fescue, perennial rye</td><td className="px-4 py-3 text-gray-600">Northern US, transition zone</td><td className="px-4 py-3 text-gray-600">Early fall, then early spring</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Warm-season</td><td className="px-4 py-3 text-gray-600">Bermuda, zoysia, St. Augustine, centipede</td><td className="px-4 py-3 text-gray-600">Southern US</td><td className="px-4 py-3 text-gray-600">Late spring through summer</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-sm text-gray-600">
+          Pallet weight is worth planning around regardless of variety: a full pallet weighs
+          1,500 to 3,000 pounds depending on soil moisture, so have it dropped as close to the
+          work area as the driver can manage.
+        </p>
+      </section>
+
+      <section className="my-10 prose prose-gray max-w-none">
+        <h2>How to Lay Sod, Step by Step</h2>
         <ol>
           <li>
             <strong>Prepare the soil.</strong> Till 4–6 inches deep, remove rocks and old
@@ -151,7 +203,7 @@ export default function SodPage() {
           </li>
           <li>
             <strong>Firm the surface.</strong> Roll or tamp the prepared soil so it is firm
-            but not compacted. The surface should not shift when you walk on it — if it
+            but not compacted. The surface should not shift when you walk on it. If it
             does, the sod will have an uneven finish.
           </li>
           <li>
@@ -159,7 +211,7 @@ export default function SodPage() {
             before installation. This helps sod roots make immediate contact with moist soil.
           </li>
           <li>
-            <strong>Lay sod in straight rows.</strong> Start along a straight edge —
+            <strong>Lay sod in straight rows.</strong> Start along a straight edge such as a
             driveway, sidewalk, or string line. Butt pieces tightly together; gaps will
             dry out and die. Stagger joints like brickwork.
           </li>

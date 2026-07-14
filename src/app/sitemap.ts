@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 
 const BASE = 'https://concrete.mrknowitall.net'
+// Content pages were substantially expanded on 2026-07-14; utility pages unchanged.
+const CONTENT_MODIFIED = new Date('2026-07-14')
 const LAST_MODIFIED = new Date('2026-06-03')
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,13 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: `${BASE}/`,
-      lastModified: LAST_MODIFIED,
+      lastModified: CONTENT_MODIFIED,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     ...calculators.map((route) => ({
       url: `${BASE}${route}/`,
-      lastModified: LAST_MODIFIED,
+      lastModified: CONTENT_MODIFIED,
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     })),

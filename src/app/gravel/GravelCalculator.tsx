@@ -154,7 +154,7 @@ export default function GravelCalculator() {
       {/* Overage */}
       <div className="mb-6">
         <p className="text-sm font-medium text-gray-700 mb-1">Overage</p>
-        <p className="text-xs text-gray-400 mb-2">Extra for compaction and uneven ground. Add 10% for driveways — gravel settles.</p>
+        <p className="text-xs text-gray-400 mb-2">Extra for compaction and uneven ground. Add 10% for driveways, since gravel settles.</p>
         <div className="flex gap-2">
           {([0, 5, 10] as Waste[]).map((w) => (
             <button

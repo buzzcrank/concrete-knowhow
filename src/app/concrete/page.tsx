@@ -8,14 +8,14 @@ import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, faqSchema, webApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Concrete Slab Calculator — Cubic Yards & Bag Count',
+  title: 'Concrete Slab Calculator: Cubic Yards and Bag Count',
   description:
-    'Calculate how much concrete you need for any slab. Instant results: cubic feet, cubic yards, and 60 lb or 80 lb bag counts. Free and accurate.',
+    'Calculate how much concrete you need for any slab. Instant results: cubic feet, cubic yards, and 40, 50, 60, or 80 lb bag counts. Free and accurate.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/concrete/' },
   openGraph: {
     type: 'article',
     publishedTime: '2026-04-01',
-    modifiedTime: '2026-05-05',
+    modifiedTime: '2026-07-14',
   },
 }
 
@@ -93,11 +93,11 @@ export default function ConcretePage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Concrete Slab Calculator
       </h1>
-      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
+      <PageMeta lastUpdated="July 2026" readingTime="7 min" />
 
       <QuickAnswer>
         Enter your slab&apos;s length, width, and thickness to instantly calculate cubic feet,
-        cubic yards, and how many 60 lb or 80 lb bags of concrete you need — with an optional
+        cubic yards, and how many 60 lb or 80 lb bags of concrete you need, with an optional
         waste buffer.
       </QuickAnswer>
 
@@ -108,7 +108,7 @@ export default function ConcretePage() {
       {/* Reference table */}
       <section className="my-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Common Slab Sizes — Quick Reference
+          Common Slab Sizes: Quick Reference
         </h2>
         <div className="overflow-x-auto rounded-lg border border-gray-200">
           <table className="w-full text-sm text-left">
@@ -138,13 +138,113 @@ export default function ConcretePage() {
           </table>
         </div>
         <p className="mt-2 text-xs text-gray-400">
-          All bag counts assume no waste buffer. Add 5–10% for real projects.
+          All bag counts assume no waste buffer. Add 5 to 10 percent for real projects.
         </p>
+      </section>
+
+      {/* Formula and worked example */}
+      <section className="my-10 prose prose-gray max-w-none">
+        <h2>How the Concrete Math Works</h2>
+        <p>
+          Every concrete volume estimate comes down to one formula. Multiply length by width by
+          thickness to get cubic feet, then divide by 27 to convert to cubic yards, because one
+          cubic yard is a 3 ft by 3 ft by 3 ft cube (27 cubic feet). Thickness is usually
+          measured in inches, so divide it by 12 first to convert to feet.
+        </p>
+        <p>
+          <strong>Worked example.</strong> Say you are pouring a 12 ft by 15 ft patio at 4
+          inches thick. Convert the thickness: 4 divided by 12 is 0.333 ft. Multiply: 12 times
+          15 times 0.333 equals 60 cubic feet. Divide by 27: 2.22 cubic yards. Add a 10 percent
+          waste buffer and you should order about 2.45 cubic yards. Ready-mix trucks sell in
+          quarter-yard increments, so you would order 2.5 yards.
+        </p>
+        <p>
+          Wet concrete weighs roughly 150 pounds per cubic foot, or about 4,050 pounds per
+          cubic yard. That number matters for two reasons: it tells you why hand-mixing more
+          than a yard is a serious workout, and it tells you a pickup truck cannot haul a yard
+          of ready-mix in tow-behind form without checking its rated capacity.
+        </p>
+      </section>
+
+      {/* Bag yields */}
+      <section className="my-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Concrete Bag Sizes and Yields
+        </h2>
+        <p className="text-sm text-gray-600 mb-3">
+          Yields below are the standard manufacturer figures printed on bagged concrete mix
+          (for example, Quikrete and Sakrete data sheets). Actual yield varies slightly with
+          how much water you add.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-gray-200">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-50 border-b border-gray-200">
+              <tr>
+                {['Bag Size', 'Yield (cubic feet)', 'Bags per Cubic Foot', 'Bags per Cubic Yard'].map((h) => (
+                  <th key={h} className="px-4 py-3 font-semibold text-gray-600">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">40 lb</td><td className="px-4 py-3 text-gray-600">0.30</td><td className="px-4 py-3 text-gray-600">3.3</td><td className="px-4 py-3 text-gray-600">90</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">50 lb</td><td className="px-4 py-3 text-gray-600">0.375</td><td className="px-4 py-3 text-gray-600">2.7</td><td className="px-4 py-3 text-gray-600">72</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">60 lb</td><td className="px-4 py-3 text-gray-600">0.45</td><td className="px-4 py-3 text-gray-600">2.2</td><td className="px-4 py-3 text-gray-600">60</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">80 lb</td><td className="px-4 py-3 text-gray-600">0.60</td><td className="px-4 py-3 text-gray-600">1.7</td><td className="px-4 py-3 text-gray-600">45</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Bags vs ready-mix */}
+      <section className="my-10 prose prose-gray max-w-none">
+        <h2>Bags or Ready-Mix: a Real Cost Comparison</h2>
+        <p>
+          For the 10 ft by 10 ft slab in the table above (1.23 cubic yards), you would need 56
+          bags of 80 lb mix. At a typical $6 to $8 per bag, that is $336 to $448 in material,
+          plus mixing labor: a bag takes about 3 to 5 minutes to mix in a rented mixer, so
+          budget 3 to 4 hours of continuous mixing. Ready-mix for the same slab at $125 to
+          $175 per yard is $155 to $215 in concrete, plus a short-load fee that often runs $75
+          to $150 for orders under 5 yards.
+        </p>
+        <p>
+          The practical crossover: below about half a cubic yard, bags win on cost and
+          convenience. Between half a yard and 1.5 yards, the numbers are close and the decision
+          is really about labor and access. Above 1.5 yards, ready-mix nearly always wins, and
+          it also removes the biggest quality risk of bagged pours, which is cold joints forming
+          between batches mixed too far apart.
+        </p>
+      </section>
+
+      {/* Common mistakes */}
+      <section className="my-10 prose prose-gray max-w-none">
+        <h2>Common Mistakes When Estimating Concrete</h2>
+        <ul>
+          <li>
+            <strong>Measuring thickness at one spot.</strong> Subgrades are rarely level. If
+            your excavation varies between 4 and 5 inches, calculate at the average depth, not
+            the shallowest point.
+          </li>
+          <li>
+            <strong>Forgetting thickened edges and footings.</strong> Many slabs are poured
+            with a thickened perimeter (8 to 12 inches deep and wide). Calculate that volume
+            separately and add it to the slab volume.
+          </li>
+          <li>
+            <strong>Skipping the waste buffer.</strong> Running short mid-pour is the worst
+            outcome in concrete work: the first batch starts setting while you wait, creating a
+            weak cold joint. Order 5 to 10 percent extra, every time.
+          </li>
+          <li>
+            <strong>Confusing cubic feet with square feet.</strong> Suppliers quote volume, not
+            area. A 100 sq ft slab is meaningless to a dispatcher until you tell them the
+            thickness.
+          </li>
+        </ul>
       </section>
 
       {/* How-to guide */}
       <section className="my-10 prose prose-gray max-w-none">
-        <h2>How to Pour a Concrete Slab — Step by Step</h2>
+        <h2>How to Pour a Concrete Slab, Step by Step</h2>
         <ol>
           <li>
             <strong>Plan and mark the area.</strong> Use stakes and string to mark the perimeter.

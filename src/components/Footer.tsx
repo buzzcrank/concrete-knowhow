@@ -67,7 +67,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  mrknowitall.net ↗
+                  mrknowitall.net
                 </a>
               </li>
               <li>
@@ -77,7 +77,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Tenant Knowhow ↗
+                  Tenant Knowhow
                 </a>
               </li>
             </ul>
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
         <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col gap-1 sm:flex-row sm:justify-between">
           <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} Mr. Know-It-All. For reference only — always verify
+            &copy; {new Date().getFullYear()} Mr. Know-It-All. For reference only. Always verify
             with your supplier. See our{' '}
             <Link href="/disclaimer/" className="underline hover:text-brand-400">
               disclaimer

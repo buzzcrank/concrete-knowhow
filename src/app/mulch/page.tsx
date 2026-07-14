@@ -8,14 +8,14 @@ import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, faqSchema, webApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Mulch Calculator — Cubic Yards & Bag Count',
+  title: 'Mulch Calculator: Cubic Yards and Bag Count',
   description:
     'Calculate how much mulch you need for any garden bed or landscape area. Instant cubic yard results plus 2 ft³ and 3 ft³ bag counts. Free.',
   alternates: { canonical: 'https://concrete.mrknowitall.net/mulch/' },
   openGraph: {
     type: 'article',
     publishedTime: '2026-04-01',
-    modifiedTime: '2026-05-05',
+    modifiedTime: '2026-07-14',
   },
 }
 
@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'How deep should mulch be?',
     answer:
-      'Apply mulch 2–4 inches deep for most landscape beds. Shredded wood mulch at 3 inches is the most common recommendation — deep enough to suppress weeds and retain moisture, but not so deep it smothers plant roots. Keep mulch 2–3 inches away from plant stems and tree trunks.',
+      'Apply mulch 2–4 inches deep for most landscape beds. Shredded wood mulch at 3 inches is the most common recommendation: deep enough to suppress weeds and retain moisture, but not so deep it smothers plant roots. Keep mulch 2–3 inches away from plant stems and tree trunks.',
   },
   {
     question: 'How many bags of mulch are in a cubic yard?',
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: 'How often should I replace mulch?',
     answer:
-      'Top up mulch every 1–2 years. Organic mulches like shredded bark and wood chips decompose and enrich the soil over time. Check depth in spring — if it has fallen below 2 inches, add a fresh layer rather than replacing everything.',
+      'Top up mulch every 1–2 years. Organic mulches like shredded bark and wood chips decompose and enrich the soil over time. Check depth in spring, and if it has fallen below 2 inches, add a fresh layer rather than replacing everything.',
   },
   {
     question: 'What type of mulch is best?',
     answer:
-      'Shredded hardwood bark is the most versatile — it stays in place, decomposes slowly, and looks tidy. Pine straw works well around acid-loving plants. Cedar and cypress resist insects and decompose more slowly. Avoid dyed rubber mulch near edible plants.',
+      'Shredded hardwood bark is the most versatile. It stays in place, decomposes slowly, and looks tidy. Pine straw works well around acid-loving plants. Cedar and cypress resist insects and decompose more slowly. Avoid dyed rubber mulch near edible plants.',
   },
   {
     question: 'Should I remove old mulch before adding new?',
@@ -93,7 +93,7 @@ export default function MulchPage() {
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Mulch Calculator
       </h1>
-      <PageMeta lastUpdated="May 2026" readingTime="4 min" />
+      <PageMeta lastUpdated="July 2026" readingTime="7 min" />
 
       <QuickAnswer>
         Enter your bed&apos;s length, width, and desired depth to instantly get cubic feet,
@@ -107,7 +107,7 @@ export default function MulchPage() {
       {/* Reference table */}
       <section className="my-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Common Bed Sizes — Quick Reference
+          Common Bed Sizes: Quick Reference
         </h2>
         <div className="overflow-x-auto rounded-lg border border-gray-200">
           <table className="w-full text-sm text-left">
@@ -131,12 +131,69 @@ export default function MulchPage() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-xs text-gray-400">No waste buffer included. Add 5–10% for irregular shapes.</p>
+        <p className="mt-2 text-xs text-gray-400">No waste buffer included. Add 5 to 10 percent for irregular shapes.</p>
+      </section>
+
+      {/* Mulch types */}
+      <section className="my-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Mulch Types Compared
+        </h2>
+        <p className="text-sm text-gray-600 mb-3">
+          The volume math is the same for every mulch, but lifespan and best use vary a lot by
+          material. This is what actually matters when you are standing at the supply yard.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-gray-200">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-50 border-b border-gray-200">
+              <tr>
+                {['Type', 'Typical Lifespan', 'Best For', 'Notes'].map((h) => (
+                  <th key={h} className="px-4 py-3 font-semibold text-gray-600">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Shredded hardwood</td><td className="px-4 py-3 text-gray-600">1 to 2 years</td><td className="px-4 py-3 text-gray-600">General beds, slopes</td><td className="px-4 py-3 text-gray-600">Knits together, stays put on grades</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Cedar</td><td className="px-4 py-3 text-gray-600">2 to 3 years</td><td className="px-4 py-3 text-gray-600">Foundation beds, pathways</td><td className="px-4 py-3 text-gray-600">Natural oils slow decay and deter some insects</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Cypress</td><td className="px-4 py-3 text-gray-600">2 to 3 years</td><td className="px-4 py-3 text-gray-600">Wet climates</td><td className="px-4 py-3 text-gray-600">Rot resistant; check sourcing sustainability</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Pine bark nuggets</td><td className="px-4 py-3 text-gray-600">2 to 3 years</td><td className="px-4 py-3 text-gray-600">Flat beds, acid-loving plants</td><td className="px-4 py-3 text-gray-600">Floats and migrates in heavy rain</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Pine straw</td><td className="px-4 py-3 text-gray-600">6 to 12 months</td><td className="px-4 py-3 text-gray-600">Azaleas, blueberries, natural areas</td><td className="px-4 py-3 text-gray-600">Sold by the bale, not the yard</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Dyed wood mulch</td><td className="px-4 py-3 text-gray-600">1 to 2 years</td><td className="px-4 py-3 text-gray-600">Color-matched landscaping</td><td className="px-4 py-3 text-gray-600">Confirm the source wood; avoid near vegetable beds</td></tr>
+              <tr className="bg-white"><td className="px-4 py-3 font-medium text-gray-800">Rubber mulch</td><td className="px-4 py-3 text-gray-600">10+ years</td><td className="px-4 py-3 text-gray-600">Playgrounds</td><td className="px-4 py-3 text-gray-600">No soil benefit; keep away from edibles</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Formula and cost comparison */}
+      <section className="my-10 prose prose-gray max-w-none">
+        <h2>How the Mulch Math Works</h2>
+        <p>
+          Length times width gives square feet. Multiply by depth in feet (inches divided by
+          12) to get cubic feet, then divide by 27 for cubic yards. A useful shortcut: one
+          cubic yard covers 324 square feet at 1 inch deep, so at the standard 3 inch depth,
+          one yard covers 108 square feet.
+        </p>
+        <p>
+          <strong>Worked example.</strong> Three beds totaling 350 square feet at 3 inches
+          deep: 350 times 0.25 ft equals 87.5 cubic feet, divided by 27 is 3.24 cubic yards.
+          Round to 3.5 yards for irregular edges and you are covered.
+        </p>
+        <h2>Bulk or Bagged: Where the Break-Even Sits</h2>
+        <p>
+          One cubic yard equals 13.5 bags of 2 cubic foot mulch or 9 bags of 3 cubic foot
+          mulch. At a typical $4 to $7 per 2 cubic foot bag, a yard of bagged mulch costs $54
+          to $95. Bulk mulch runs $25 to $60 per yard plus a delivery fee that is often $50 to
+          $100 regardless of quantity. The break-even is usually around 2 to 3 cubic yards:
+          below that, bags are competitive and easier to move; above it, bulk wins clearly.
+          Bags also make sense when you cannot accept a driveway pile, since a yard of bulk
+          mulch weighs 400 to 800 pounds and arrives loose.
+        </p>
       </section>
 
       {/* How-to guide */}
       <section className="my-10 prose prose-gray max-w-none">
-        <h2>How to Mulch a Garden Bed — Step by Step</h2>
+        <h2>How to Mulch a Garden Bed, Step by Step</h2>
         <ol>
           <li>
             <strong>Weed thoroughly.</strong> Pull all weeds before mulching. Mulch suppresses
@@ -148,7 +205,7 @@ export default function MulchPage() {
           </li>
           <li>
             <strong>Water the soil.</strong> If the ground is dry, water it before mulching.
-            Mulch locks in whatever moisture is present — start with moist soil.
+            Mulch locks in whatever moisture is present, so start with moist soil.
           </li>
           <li>
             <strong>Apply a pre-emergent (optional).</strong> For beds prone to weed pressure,

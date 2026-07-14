@@ -1,6 +1,6 @@
 # Concrete Knowhow
 
-> Free, accurate construction material calculators for concrete, gravel, mulch, topsoil, sand, and sod. All calculations run in the browser — no sign-up, no data collection.
+> Free, accurate construction material calculators for concrete, gravel, mulch, topsoil, sand, and sod. All calculations run in the browser. No sign-up, no data collection.
 
 Concrete Knowhow helps homeowners and contractors estimate material quantities for outdoor and construction projects. Enter dimensions, get instant results in cubic yards, tons, or bag counts.
 
